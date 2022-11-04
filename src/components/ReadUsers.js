@@ -18,9 +18,9 @@ const ReadUsers = () => {
             {usernames?.length > 0
                 ?(
                     <div className="usernames">
-                        {usernames.map((user) => {
+                        {usernames.map((user) => (
                             <h3>{user}</h3>
-                        })}
+                        ))}
 
                     </div>
                 ) : (
