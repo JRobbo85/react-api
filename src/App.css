@@ -3,19 +3,59 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
+  background-color: wheat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  background-color: wheat;
+  height: 100vh;
 }
+
+.body {
+  background-color: wheat;
+}
+
+#navbar{
+  height:10vh;
+  width:100%;
+  background-color: rgb(40, 0, 77);
+  margin-bottom: 2vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 1vh;
+  border-color: rgb(59, 59, 59);
+  border-bottom-style: solid;
+  box-shadow: 2px 4px black;
+  font-weight: bold;
+  
+}
+
+#title{
+  margin:0;
+  margin-left:1vw;
+  color: antiquewhite;
+  font-size: 44px;
+  font-family: Georgia, 'Times New Roman', Times, serif
+}
+
 
 .maincontainer {
   width : 50vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: wheat;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.start {
+  width: 60vw;
 }
 
 .register{
@@ -23,6 +63,10 @@
   flex-direction: column;
   justify-content:flex-end;
   align-items: center;
+  border-style: groove;
+  border-width: 0.4vw;
+  padding: 1vw;
+  padding-top: 0vw;
 }
 
 .login{
@@ -30,34 +74,18 @@
   flex-direction: column;
   justify-content:flex-end;
   align-items: center;
+  border-style: groove;
+  border-width: 0.4vw;
+  padding: 1vw;
+  padding-top: 0vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loggedIn {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  width: 100vw;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#welcome {
+  text-align: right;
 }

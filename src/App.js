@@ -4,6 +4,7 @@ import ReadUsers from "./components/ReadUsers"
 import DeleteUser from "./components/DeleteUser"
 import LoginUser from "./components/LoginUser"
 import UpdateUser from "./components/UpdateUser"
+import Header from "./components/Header"
 import {getCookie} from "./common/index"
 import {findUser} from "./utils/Index"
 import {useState, useEffect} from "react"
@@ -37,9 +38,10 @@ function App() {
       <div className = "maincontainer">
 
       </div>
+      <Header />
       {user ? 
-        <div>
-        <h2>Hello! Welcome {user}!</h2>
+        <div classname="loggedIn">
+        <h2 id = "welcome">Hello! Welcome {user}!</h2>
         <ReadUsers />
         <DeleteUser />
         <UpdateUser />
@@ -53,9 +55,12 @@ function App() {
         })}
         <div className="imageContainer"> </div>
         </div>
-      : <div className="start"><h2>Please Register or Login to Continue.</h2>      
-        <div className = "register"><h1>Register</h1><br></br><Register setter={setUser} /></div>
-        <div className = "login"><h1>Login</h1><br></br><LoginUser setter={setUser}/></div>
+      : 
+        <div className="start"><h2>Please Register or Login to Continue.</h2>      
+          <div className = "options">
+            <div className = "register"><h1>Register</h1><br></br><Register setter={setUser} /></div>
+            <div className = "login"><h1>Login</h1><br></br><LoginUser setter={setUser}/></div>
+          </div>
         </div>
       }
     
