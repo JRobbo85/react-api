@@ -35,14 +35,11 @@ function App() {
 
   return (
     <div className="App">
-      <div className = "maincontainer">
-
-      </div>
       <Header />
       {user ? 
         <div classname="loggedIn">
-        <h2 id = "welcome">Hello! Welcome {user}!</h2>
-        <ReadUsers />
+        <div id = "welcome">Hello! Welcome {user}!</div>
+        <div className = "userlist"><ReadUsers /></div>
         <DeleteUser />
         <UpdateUser />
         {photos.map((item,index)=>{
