@@ -1,6 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react"
 import {readUsers} from "../utils/Index"
+import "./ReadUsers.css"
 
 const ReadUsers = () => {
     const [usernames, setUsernames] = useState()
@@ -14,7 +15,7 @@ const ReadUsers = () => {
         setUsernames(users)
     }
     return (
-        <div className = "container">
+        <div className = "usercontainer">
             {usernames?.length > 0
                 ?(
                     <div className="usernames">

@@ -1,0 +1,8 @@
+.usercontainer {
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    font-size: 12px;
+    line-height: 1vh;
+    max-width: 10vw;
+}
